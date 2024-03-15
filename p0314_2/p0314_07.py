@@ -17,7 +17,7 @@ f.close()
 # str1.txt에 그 내용을 추가해 보세요
 
 
-f = open("str.txt",'w',encoding='utf8')
+f = open("str.txt",'r',encoding='utf8')
 ff = open("str1.txt",'a',encoding='utf8')
 
 while True:
