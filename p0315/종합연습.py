@@ -1,4 +1,6 @@
-from practice import*
+from practice_idpw import*
+from practice_파일 import*
+from practice_성적처리 import*
 
 
 # idpw 생성

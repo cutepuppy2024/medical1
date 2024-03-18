@@ -18,7 +18,7 @@ def idpw():
 
     return all_idpw
 
-
+# 아이디 패스워드 파일에 저장
 def idpw_open(all_idpw):
     with open("all_idpw.txt",'w',encoding='utf8') as f:
         for i in range(len(all_idpw)):
