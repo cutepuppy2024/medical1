@@ -81,3 +81,5 @@ while True:
             # 파일 닫기
             print('파일에 글자를 저장했습니다')
             f.close()        
+
+            

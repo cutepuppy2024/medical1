@@ -30,11 +30,11 @@ def stu_save(students):
             rank = s["rank"]
             
         f.write(f'{stuNo},{name},{kor},{eng},{math},{total},{avg},{rank}\n')
-        f.close()
     print('모든 내용이 파일에 저장되었습니다')
     print()                                                                                            
 
 def stu_update():
     pass
+    print()       
 
 # clear

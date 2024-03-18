@@ -58,8 +58,9 @@ while True :
             else:
                 print('{},학생이 명단에 없습니다.'.format(search_Name))
                 print('다시 입력해 주세요')
+                break
                 
-    elif choice == 4 :   #!!!!!!!!
+    elif choice == 4 :   
         while True :
             print('학생수정을 선택하셨습니다')
             chk = 0
@@ -67,13 +68,13 @@ while True :
             search_Name = input('수정하고자 하는 학생의 이름을 입력하세요(0.중단) >>')
             if search_Name == '0':
                 break
-            for i in students:
-                if not search_Name in i:
-                    print('{},학생이 명단에 없습니다.'.format(search_Name))
-                    break
-                else: 
+            for stu in students:
+                if search_Name == stu[1]:                    
                     print('{},학생이 명단에 있습니다'.format(search_Name))  
                     chk = 1
+                    break
+                count += 1
+
             if chk == 1:
                 cor_sub = input('수정하고자 하는 과목을 선택해 주세요(1.국어 2.영어 3.수학 0.취소)>>')
                 if cor_sub == '0':
@@ -81,14 +82,33 @@ while True :
                 cor_sub = int(cor_sub)                 
                 if cor_sub == 1:
                     print('국어를 선택하셨습니다')
-                    print('{}의 국어 성적은 현재 {}점 입니다'.format(search_Name,count[i][2]))
+                    print('{}의 국어 성적은 현재 {}점 입니다'.format(search_Name,students[count][2]))
                     c_kor = int(input('수정할 국어성적을 입력하세요 >>'))
-                    students[i][2] = c_kor
-                    print('{} 학생의 국어 성적이 {}점으로 수정되었습니다.'.format(search_Name,count[i][2]))
-                    students[i][5] = students[i][2]+students[i][3]+students[i][4]  
-                    students[i][6] = (students[i][2]+students[i][3]+students[i][4])/3 
-                    print(students[i])                                      
-            count += 1 # 찾는 위치
+                    students[count][2] = c_kor
+                    print('{} 학생의 국어 성적이 {}점으로 수정되었습니다.'.format(search_Name,students[count][2]))
+                    students[count][5] = students[count][2]+students[count][3]+students[count][4]  
+                    students[count][6] = (students[count][2]+students[count][3]+students[count][4])/3 
+                    print(students[count])
+                elif cor_sub == 2:
+                    print('영어를 선택하셨습니다')
+                    print('{}의 영어 성적은 현재 {}점 입니다'.format(search_Name,students[count][3]))
+                    c_eng = int(input('수정할 영어성적을 입력하세요 >>'))
+                    students[count][2] = c_eng
+                    print('{} 학생의 영어 성적이 {}점으로 수정되었습니다.'.format(search_Name,students[count][3]))
+                    students[count][5] = students[count][2]+students[count][3]+students[count][4]  
+                    students[count][6] = (students[count][2]+students[count][3]+students[count][4])/3 
+                    print(students[count]) 
+                if cor_sub == 3:
+                    print('수학을 선택하셨습니다')
+                    print('{}의 수학 성적은 현재 {}점 입니다'.format(search_Name,students[count][4]))
+                    c_kor = int(input('수정할 수학성적을 입력하세요 >>'))
+                    students[count][2] = c_eng
+                    print('{} 학생의 수학 성적이 {}점으로 수정되었습니다.'.format(search_Name,students[count][4]))
+                    students[count][5] = students[count][2]+students[count][3]+students[count][4]  
+                    students[count][6] = (students[count][2]+students[count][3]+students[count][4])/3 
+                    print(students[count]) 
+            else:
+                print('찾는 학생이 존재하지 않습니다')                                                              
 
         
                 

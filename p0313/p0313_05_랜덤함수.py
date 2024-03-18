@@ -35,11 +35,7 @@ print(random.sample([1,2,3,4,5],k=2))
 
 
 
-# import math
 
-# print(math.sin(1))
-# print(math.cos(1))
-# print(math.tan(1))
 
 
 # clear

@@ -9,7 +9,6 @@ import random
 
 ran_num = random.randint(1,100)
 
-input_num = 0
 cnt = 1
 input_nums = []
 while True:

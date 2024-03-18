@@ -10,10 +10,9 @@ print('0.프로그램종료')
 print('-'*35)
 
 print('번호\t이름\t국어\t영어\t수학\t합계\t평균\t등수')
-print('{}  \t{} \t{}  \t{}  \t{} \t{}  \t{}  \t{}'.format(
-    1, '홍길동' ,100,100,100,300,100.0,1
+print('{}  \t{}   \t{} \t{}  \t{} \t{}  \t{}  \t{}'.format(
+       1, '홍길동',100, 100,  100, 300,  100.0, 1
     ))
-
 
 
 stu_no1 = 1
@@ -22,7 +21,7 @@ kor1 = input('국어성적 >>')
 kor1 = int(kor1)
 eng1 = input('영어성적 >>')
 eng1 = int(eng1)
-math1 = input('수학성적  >>')
+math1 = input('수학성적 >>')
 math1 = int(math1)
 total1 = (kor1+eng1+math1)
 avg1 = (kor1+eng1+math1)/3

@@ -1,5 +1,5 @@
 # from datetime import datetime
-#now = datetime.now()
+# now = datetime.now()
 import datetime
 
 now = datetime.datetime.now()
@@ -17,8 +17,8 @@ print(output_d)
 
 
 
-# # import datetime
-# from datetime import datetime
+# import datetime
+from datetime import datetime
 
 print('현재시각 출력')
 # now = datetime.datetime.now()
@@ -33,8 +33,8 @@ print()
 
 
 
-# from pytz import timezone
-# print(datetime.now(timezone('Asia/Seoul')))
+from pytz import timezone
+print(datetime.now(timezone('Asia/Seoul')))
 # pip install pytz 설치
 
 

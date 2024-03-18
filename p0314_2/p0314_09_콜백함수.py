@@ -9,21 +9,23 @@ def callback_func(h_print):
 def h_print(num):
     print('안녕하세요',num)
 
-
 # 함수호출
 callback_func(h_print)
   
 
-# # 함수호출
-# h_print()
-
-# # 함수를 변수에 저장
-# func = h_print      
-
-# # func = h_print()  # 함수 실행을 저장한것     
-
-# print(func)
 
 
+#---------------------------------------------------------------------
+# 함수호출
+h_print()
 
-    
+# 함수를 변수에 저장
+func = h_print      
+# 함수 실행을 저장한것 
+func = h_print()      
+
+print(func)
+
+
+
+# clear  

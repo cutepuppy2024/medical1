@@ -1,17 +1,17 @@
-#  변수
-a = False #bool
-b = 123 # 정수
-c = 1.3456 # 실수
-d = '문자' # 문자열
-e = [1,2,3] #리스트
+# 변수
+a = False        # bool
+b = 123          # 정수
+c = 1.3456       # 실수
+d = '문자'       # 문자열
+e = [1,2,3]      # 리스트
 
-#출력
+# 출력
 print('안녕하세요')
 print(123*456)
 str1= "반갑습니다"
-print(str1) # 변수를 통한 출력
+print(str1)       # 변수를 통한 출력
 print('{0:s} : {1:d} / {2:d} = {3:f}'.format(
-    '수식',7,3,7/3))
+      '수식',     7,      3,    7/3))
 print('{} : {} / {} = {:.3f}'.format('수식',7,3,7/3))
 
 
@@ -19,7 +19,7 @@ print('{} : {} / {} = {:.3f}'.format('수식',7,3,7/3))
 # > : 크다 >= : 크거나같다
 # < : 작다 <= : 작거나 같다
 # == : 같다 != : 같지 않다
-print(3>5) # 결과가 거짓 : False
+print(3 > 5) # 결과가 거짓 : False
 n1 = 10
 n2 = 8
 print(n1 != n2) # True
@@ -29,6 +29,7 @@ print(n1 != n2) # True
 # 논리연산자 : and or not
 a , b = 10, 9
 print('and 연산자')  # 둘 다 참이어야 참이다
+
 if a == 10 and b == 9 :
     print('참 and 참 = 참')
 else :
@@ -38,10 +39,12 @@ if a == 10 and b != 9 :
     print('참 and 거짓 = 참')
 else:
     print('참 and 거짓 = 거짓')
+
 if a != 10 and b == 9 :
     print('거짓 and 참  = 참')
 else :
     print('거짓 and 참 = 거짓')
+
 if a != 10 and b != 9 :
     print('거짓 and 거짓  = 거짓')
 else :
@@ -52,6 +55,7 @@ if a == 10 and b == 9 :
     print('참 or 참 = 참')
 else :
     print('거짓 or 거짓 = 거짓')  
+    
 if a == 10 or b != 9 :
     print('참 or 거짓 = 참')
 else:

@@ -4,8 +4,6 @@ import stu_file
 students = stu_file.stu_open()
 s_title = ['','국어','영어','수학']
 
-print(students)
-
 # 학생성적 화면 함수
 def stu_main_print():
     print('-'*40)
@@ -24,13 +22,14 @@ def stu_main_print():
     print('-'*40)
     if not choice.isdigit():
         print('숫자만 입력 가능합니다.')
-        choice = int(choice)  
+    choice = int(choice)  
     return choice    # 한개짜리 변수라서 
+
 
 # 학생성적입력 함수
 def stu_insert(cnt):
     while True :
-        name = input(f'{cnt}번째 이름을 입력하세요 (0.취소)>>')
+        name = input(f'{len(students)+1}번째 이름을 입력하세요 (0.취소)>>')
         if(name == '0'):
             print('학생 입력을 취소합니다')
             break
@@ -50,9 +49,8 @@ def stu_insert(cnt):
         # list에 추가
         students.append(student)
         cnt += 1
-        print(student)
         print('입력 데이터 :',student) #list => dict
-        print(students)                           
+        print(students)              
 
 # 학생성적상단출력함수
 def stu_top_print():
@@ -70,9 +68,11 @@ def stu_grade_print(stu_list):
         print()
     print('-'*65)
     print()
-    
+
 # 학생성적검색 함수
 def stu_search():
+    # 이름으로 검색해서 해당하는 학생이 있으면 해당학생 성적출력
+    # 1명출력 
     search_students = []
     print('[ 학생 성적 검색 ]')
     search = input('찾고자 하는 학생 이름을 입력하세요. >> ')
@@ -90,8 +90,7 @@ def stu_search():
         # 1 명의 학생을 search_students 리스트에 추가
         search_students.append(students[search_cnt])
         stu_grade_print(search_students)      
-        # 이름으로 검색해서 해당하는 학생이 있으면 해당학생 성적출력
-        # 1명출력 
+
          
 # 학생성적수정 = 과목선택부분 함수      
 def stu_subject_update(s_input,chk,s_1):
@@ -142,7 +141,6 @@ def stu_update() :
                     print("과목 수정을 취소합니다.")
                     break
 
-
 # 등수처리 함수
 def rank_stu():
     for i,s_dic in enumerate(students):
@@ -182,14 +180,14 @@ def stu_delete():
                 del students[chk]
                 print('{} 학생성적이 삭제 되었습니다.'.format(search))
                 print(students)
-    
-# # --------------------------------------------
-# #               프로그램 시작
-# # --------------------------------------------
 
-cnt = len(students)
+#-------------------------------
+#       프로그램 시작
+#-------------------------------
+
+
+cnt = len(students)+1
 # 학생번호 사용
-
 
 while True:
     # 학생성적화면함수 호출
@@ -198,6 +196,7 @@ while True:
     # 1. 학생성적입력 프로그램
     if choice == 1 :
         stu_insert(cnt)   # 학생성적입력함수 호출
+        stu_file.stu_update(students)
     
     # 2. 학생성적전체출력 프로그램
     elif choice == 2 :
@@ -210,30 +209,33 @@ while True:
     # 4. 학생수정
     elif choice == 4:
         stu_update()
+        stu_file.stu_update(students)
 
     # 5. 등수처리
     elif choice == 5:
         rank_stu()   # 등수처리함수 호출
-           
+        stu_file.stu_update(students)
+
     # 6. 학생삭제
     elif choice == 6:
         stu_delete() # 학생삭제함수 호출
-    
-    
-    # 7. 
+        stu_file.stu_update(students)
+       
+    # 7. 전체내용 저장
     elif choice == 7:
         stu_file.stu_save(students)
+
     elif choice == 0:
         print('프로그램을 종료합니다.')
         break  # 반복문 종료
     else:
         print('선택된 서비스가 없습니다.')
         
-        
-        
-        
-        
-        
-# 학생번호 삭제한 후 다시 입력할 때 어떻게 될지 고민해보기
 
 
+# 1,홍길동,100,100,99,299,96.67,1
+# 2,유관순,99,99,98,296,98.67,1 
+# 3,강감찬,80,80,81,241,80.33,1
+# 4,김구,100,100,90,290,96.67,1
+# 5,김유신,90,70,50,210,70.0,1
+# 6,이순신,100,100,100,300,300.0,1  
