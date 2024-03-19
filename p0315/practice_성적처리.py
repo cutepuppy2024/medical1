@@ -76,21 +76,21 @@ def search_score(students,search_chk):
     all_score_print(search_students)
 
 
-def stu_subject_update(students,s_title, s_input,chk,s_1):
+def stu_subject_update(students,s_title, s_input, search_chk,s_1):
     print("[ {} 수정 ]".format(s_title[s_input]))
-    print("현재 {}점수 : {}".format(s_title[s_input],students[chk][s_1]))
+    print("현재 {}점수 : {}".format(s_title[s_input],students[search_chk][s_1]))
     print("-"*20)
     score = int(input("수정할 {}점수를 입력하세요.".format(s_title[s_input])))
-    students[chk][s_1] = score
+    students[search_chk][s_1] = score
     # 합계수정
-    students[chk]["total"] = students[chk]["kor"] + students[chk]["eng"] + students[chk]["math"]
-    students[chk]["avg"] = float("{:.2f}".format(students[chk]["total"]/3))
-    print("{}점수 : {}점으로 수정이 완료되었습니다.".format(s_title[s_input],students[chk][s_1]))
-    print(students[chk])
-    return s_input, chk, s_1
+    students[search_chk]["total"] = students[search_chk]["kor"] + students[search_chk]["eng"] + students[search_chk]["math"]
+    students[search_chk]["avg"] = float("{:.2f}".format(students[chk]["total"]/3))
+    print("{}점수 : {}점으로 수정이 완료되었습니다.".format(s_title[s_input],students[search_chk][s_1]))
+    print(students[search_chk])
+    return s_input, search_chk, s_1
 
 
-def stu_update(students) :
+def stu_update(students,search_chk) :
     while True:
         # 찾는 부분 프로그램 작성하시오.
         search_student(students)
@@ -102,13 +102,13 @@ def stu_update(students) :
             s_input = int(input("수정할려는 과목을 선택하세요.( 0.취소 ) >> "))
             if s_input == 1:
                 s_1 = "kor"
-                stu_subject_update(s_input,chk,s_1)    
+                stu_subject_update(s_input,search_chk,s_1)    
             elif s_input == 2:
                 s_1 = "eng"
-                stu_subject_update(s_input,chk,s_1)    
+                stu_subject_update(s_input,search_chk,s_1)    
             elif s_input == 3:
                 s_1 = "math"
-                stu_subject_update(s_input,chk,s_1)    
+                stu_subject_update(s_input,search_chk,s_1)    
             else:
                 print("과목 수정을 취소합니다.")
                 break

@@ -44,7 +44,7 @@ while True:
                     search_score(students)
 
                 elif choice == 4:
-                    stu_subject_update(students, s_title, s_input, chk, s_1)
+                    stu_subject_update(students, s_title)
                     stu_update()
 
 
