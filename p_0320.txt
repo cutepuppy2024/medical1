@@ -1,0 +1,1 @@
+& C:/Python312/python.exe c:/workspace/medical1/p0319/p0319_self_학생성적.py

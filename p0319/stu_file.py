@@ -11,3 +11,18 @@ def stu_file_open():
         students.append(s_dic)
 
     return students
+def stu_file_save(students):
+    f = open("stu.txt","w",endocing=('utf8'))
+    while True:
+        for s_dic in students:
+            stuNo = s_dic["stoNo"]
+            name = s_dic["name"]
+            kor = s_dic["kor"]
+            eng = s_dic["eng"]
+            math = s_dic['math']
+            total = s_dic["total"]
+            avg = s_dic["avg"]
+            rank = s_dic["rank"]
+
+        f.write(f'{stuNo},{name},{kor},{eng},{math},{total},{avg},{rank}\n')
+        f.close()

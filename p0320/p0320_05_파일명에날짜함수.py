@@ -23,4 +23,12 @@ f.close()
 
 import datetime
 
-with open()
+# 날짜
+now = datetime.datetime.now
+f_name = 'p'+now.strftime("%m%d")+'.txt'
+# 파일명
+str1 = input("입력")
+
+with open("","w",encoding='utf8') as f:
+    f.write(str1)
+    
