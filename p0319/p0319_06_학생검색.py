@@ -15,6 +15,7 @@ while True:
     print('[학생성적 검색]')
     print('1. 이름으로 검색')
     print('2. 점수 검색')
+    print('3. 학생성적검색')
     choice = int(input("원하는 번호를 입력하세요. >>"))
 
     if choice == 1 :
@@ -25,7 +26,6 @@ while True:
             # if n.find(search) != -1:  # 검색어가 포함이 되어 있는지 확인
             if search in s[0]:
                 search_list.append(cnt)
-                break   # for문을 나간다
             cnt += 1  
             
         if len(search_list) == 0:
@@ -35,8 +35,7 @@ while True:
             print(f'{search}으로 검색된 사람',end ='')
             for i in search_list:
                 print(stu[i][0],end='')
-                print()
-                print()       
+                print()      
                 
     elif choice == 2 :  
         # 80 -> 80점 이상인 사람의 이름이 출력되도록 해보세요
@@ -46,7 +45,6 @@ while True:
         for s in stu:
             if score <= s[1]:
                 score_list.append(cnt)
-                break
         cnt += 1
         
         if len(score_list) == 0:
@@ -55,7 +53,7 @@ while True:
         else:
             print(f'{score} 이상인 사람 ',end ='')  # 상관없음
             for i in score_list:
-                print(students[i][0],students[i][1])
+                print(stu[i][0],stu[i][1])
             print()
             print()
             
@@ -73,14 +71,14 @@ while True:
                 s_list= []
                 # 전체리스트에서 학생 검색
                 s_cnt = 0
-                for i in students:
+                for i in stu:
                     if i.name.find(search) != -1:
                         s_list.append(i)
                         print(i)                          
-                if s_cnt == len(students):
+                if s_cnt == len(stu):
                     print("찾고자 하는 학생이 없습니다. 다시 검색하세요")              
                 else:
-                    print(students[s_cnt]) 
+                    print(stu[s_cnt]) 
 
             elif choice == 2:
                 pass
