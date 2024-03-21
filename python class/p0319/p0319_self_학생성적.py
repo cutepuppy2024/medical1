@@ -22,25 +22,26 @@ def main_print():
     choice = int(input('원하는 번호를 선택하세요 >> '))
     
 def stu_input(cnt):
-    print('학생성적입력을 선택하셨습니다.')
-    name = input('학생의 이름을 입력하세요 >> (0.취소)')
-    s_dic = {}
-    kor = int(input('국어성적을 입력하세요 >> '))
-    eng = int(input('영어성적을 입력하세요 >> '))
-    math = int(input('수학성적을 입력하세요 >> '))
-    total = kor + eng + math
-    avg = total/3
-    s_dic["stuNo"] = cnt
-    s_dic["name"] = name
-    s_dic["kor"] = kor
-    s_dic["eng"] = eng
-    s_dic["math"] = math
-    s_dic["total"] = total
-    s_dic["avg"] = float(f'{avg}')
-    s_dic["rank"] = 1
-    students.append(s_dic)
-    cnt += 1
-    print(students)
+    while True:
+        print('학생성적입력을 선택하셨습니다.')
+        name = input('학생의 이름을 입력하세요 >> (0.취소)')
+        s_dic = {}
+        kor = int(input('국어성적을 입력하세요 >> '))
+        eng = int(input('영어성적을 입력하세요 >> '))
+        math = int(input('수학성적을 입력하세요 >> '))
+        total = kor + eng + math
+        avg = total/3
+        s_dic["stuNo"] = cnt
+        s_dic["name"] = name
+        s_dic["kor"] = kor
+        s_dic["eng"] = eng
+        s_dic["math"] = math
+        s_dic["total"] = total
+        s_dic["avg"] = float(f'{avg}')
+        s_dic["rank"] = 1
+        students.append(s_dic)
+        cnt += 1
+        print(students)
     
 def score_main_print():
     print('학생성적전체출력을 선택하셨습니다')

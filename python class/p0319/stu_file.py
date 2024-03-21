@@ -11,6 +11,7 @@ def stu_file_open():
         students.append(s_dic)
 
     return students
+
 def stu_file_save(students):
     f = open("stu.txt","w",endocing=('utf8'))
     while True:
