@@ -48,7 +48,6 @@ while True:
         student['total'] = total
         avg = total/3
         student['avg'] = float('{:.2f}'.format(avg))
-        student['rank'] = 1
         students.append(student)
         print(students)
         
@@ -131,9 +130,10 @@ while True:
     
     elif choice == 5:     # => 띄어쓰기
         print('등수처리를 선택하셨습니다.')
-
+        for s_dic in students:
+            s_dic["rank"] = 1
+            
         for i, s_dic in enumerate(students): 
-            s_rank = 1     # => 이 숫자의 위치
             for c_total in students:
                 if s_dic['total'] < c_total['total']:
                     s_rank += 1

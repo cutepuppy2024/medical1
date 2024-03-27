@@ -7,9 +7,9 @@ res = requests.get("https://www.melon.com/")      # 406 : 오류가 아니라 �
 print(res)  # 코드상태 출력   #  <Response [406]>
 print("코드 :",res.status_code)  #  코드 : 406  => 리턴한 소스의 코드값을 출력
 print(type(res.status_code))     # <class 'int'>
-res.raise_for_status() # 코드가 200이 아니면 오류처리해서 자동멈춤 => 
+res.raise_for_status() # 코드가 200이 아니면 오류처리해서 자동멈춤 
 
-if res.status_code == requests.codes.ok :      # 200
+if res.status_code == requests.codes.ok :         # 200
     print("정상페이지 호출입니다.")
 else :
     print("에러코드 발생")
