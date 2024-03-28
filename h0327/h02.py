@@ -19,4 +19,3 @@ with open("h0327/aaa/member2.csv","r",encoding='utf8') as f: # 절대경로
         print(mem[0], mem[1])   # 아이디만 출력
         
         
-        #상위폴더부터 찾기 시작한다면 아까는 medical1 하위 폴더에 있었는데 왜 안 됐을까?
