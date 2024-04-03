@@ -59,8 +59,16 @@
         .econt1 div{width:70px; height:45px; background: #907559;
         position:relative; left:10px; top:10px; font-size:15px; color:white;
     font-weight: 600; line-height: 45px; text-align: center; }
+
+        .e_img:hover{animation:img_zoom 1s; 
+            animation-fill-mode: forwards;}
         .e_img1{ background: url('images/blooming_rs.jpg') -36px -15px no-repeat;
                     background-size: 120%; }
+
+        @keyframes img_zoom{
+            from{background-size: 120%; }
+            to{background-size: 140%; background-position: -80px -45px;}
+        }
         .e_img2{ background: url('images/toast_rs.jpg') -36px -15px no-repeat;
                     background-size: 120%;}
         .e_img3{ background: url('images/reo_rs.jpg') -36px -15px no-repeat;
@@ -145,7 +153,7 @@
                 <h2>EVENT</h2>
                 <div id="eventCon">
                     <div class="econt">
-                        <div class="econt1 e_img1">
+                        <div class="econt1 e_img e_img1">
                             <div>이벤트</div>
                         </div>
                         <div class="econt2">
@@ -154,7 +162,7 @@
                         </div>
                     </div>
                     <div class="econt">
-                        <div class="econt1 e_img2">
+                        <div class="econt1 e_img e_img2">
                             <div>이벤트</div>
                         </div>
                         <div class="econt2">
@@ -163,7 +171,7 @@
                         </div>
                     </div>
                     <div class="econt">
-                        <div class="econt1 e_img3">
+                        <div class="econt1 e_img e_img3">
                             <div>이벤트</div>
                         </div>
                         <div class="econt2">
