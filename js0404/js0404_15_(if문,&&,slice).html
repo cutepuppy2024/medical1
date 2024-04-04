@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>else if</title>
+    <script>
+        // 12,1,2월 겨울/ 3,4,5  봄, 6,7,8 여름  9,10,11 가을
+        // 1 - 겨울입니다.
+
+        var season2 = prompt("몇 월인지 입력하세요"); // str 원본
+        var season1 = season2.slice(0,-1); // str은 길이가 있다 -> 길이 1이 줄어듬
+        season = Number(season1); // number는 길이가 없다
+
+        if(3<=season && season <=5){ //3<=season<=5
+            document.write("봄입니다.<br>");
+        }else if(6<=season && season <=8){
+            document.write("여름입니다.<br>");
+        }else if(9<=season && season <=11){
+            document.write("가을입니다.<br>");
+        }else if(1<=season && season<=2 || season <=12){
+            document.write("겨울입니다.<br>");}
+
+        document.write("입력글자 : ")
+
+
+
+    
+    </script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+
+</body>
+</html>

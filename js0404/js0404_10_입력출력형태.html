@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>입력받기</title>
+
+    <script>
+
+
+    </script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <script>
+        /* 입력형태 - input, prompt */
+        // form input 타입
+        //이름, 국어, 영어를 입력받아 출력하시오.
+        var name = prompt("당신의 이름은?","이름 공백없이...")
+        var kor = Number(prompt("국어점수는?"));
+        var eng = Number(prompt("영어점수는?"));
+        var math = Number(prompt("수학점수는?"));
+        var total = Number(kor) + Number(eng) + Number(math)
+        total = parseInt(total);
+
+        document.write("이름 : ",name,"<br>");
+        document.write("국어 : ",kor,"<br>");
+        document.write("영어 : ",eng,"<br>");
+        document.write("수학 : ",math,"<br>");
+        document.write("합계 : ",total,"<br>");
+
+        
+        console.log(name);
+        console.log(kor);
+        console.log(eng);
+        console.log(math);
+        console.log(total);
+
+        alert(name);
+        alert(kor);
+        alert(eng);
+        alert(math);
+        alert(total);
+
+
+        /* 출력형태 */
+        //alert("출력1 알럿");
+        //console.log("출력2 콘솔");
+        //document.write("출력3 document.write");
+    </script>
+
+
+</body>
+</html>

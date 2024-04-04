@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>if, else if</title>
+    <script>
+        // 1-100까지 숫자를 입력받아, 90->A, 80->B, 70->C, 60->D, 60이하->F
+        // 93이하 A-, 94-97 A, 98-100 A+
+
+        var score = Number(prompt("점수를 입력하세요"))
+        var grade ="";
+
+        if(score>=90) {
+            grade ="A"
+            if(score>=98){grade += "+"}
+            else if(score<=93){grade+="-"}}
+
+        else if(score>=80){
+            grade ="B"
+            if(score>=88){grade += "+"}
+            else if(score<=83){grade+="-"}}
+            
+        else if(score>=70){
+            grade ="C"
+            if(score>=78){grade += "+"}
+            else if(score<=73){grade+="-"}}
+
+        else if(score>=60){
+            grade ="D"
+            if(score>=68){grade += "+"}
+            else if(score<=63){grade+="-"}}
+        
+        else {
+            grade ="F"
+      }
+      document.write("결과 : ",grade);
+
+
+
+
+        /*숫자를 입력받아 양수,0,음수를 출력하시오.
+
+        var num =Number(prompt("숫자를 입력하세요 "))
+
+        if(num>0){
+            document.write("양수");
+
+        }else if(num==0){
+            document.write("0");
+        }else{
+            document.write("음수");
+        }*/ 
+
+    
+    </script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+
+</body>
+</html>

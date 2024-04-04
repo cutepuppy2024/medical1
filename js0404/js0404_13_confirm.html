@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>if</title>
+    <script>
+        //  console, document, // 확인 받을 때 : alert, prompt, confirm
+        /*var result = confirm("글쓰기를 취소하시겠습니까?")
+        document.write(result);*/
+        function writeBtn(){
+
+        if (confirm("글쓰기를 삭제하시겠습니까?")){
+            document.write("글쓰기를 삭제합니다");
+        }else{
+            alert("글쓰기가 취소되었습니다.");
+        }
+        } 
+
+
+
+
+        /* 숫자를 입력받아 홀수, 짝수출력 
+        var input1 = Number(prompt("숫자를 입력하세요."));
+
+        if (input1%2 == 1) {document.write("홀수")}
+        else{document.write("짝수")}*/
+
+    
+    </script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+
+    <h2>글쓰기</h2>
+    <input type="text"><br>
+    <button type="submit" onclick="writeBtn()">글쓰기</button>
+    <!--
+    <input type="submit" onclick="writeBtn()" value="글쓰기">-->
+</body>
+</html>
+
+

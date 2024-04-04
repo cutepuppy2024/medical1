@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>논리연산자</title>
+
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 30;
+        var d = 40;
+        var result;
+
+        result = (a>b || b>=c); //둘중에 하나만 맞으면 참 - false
+        document.write("result : ",result,"<br>");
+
+        result =(a>d || c>b);  // true
+        document.write("result :",result,"<br>"); 
+
+        result =(b>a && d>c); // 2가지 모두 맞아야 함 - true
+        document.write("result :",result,"<br>");
+
+        result =!(a>b);   // true
+        document.write("result : ",result,"<br>");
+
+    </script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+
+</body>
+</html>
