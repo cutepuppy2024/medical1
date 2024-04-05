@@ -1,0 +1,38 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <title>switch</title>
+    <script>
+        var site = prompt("1. 네이버 2.구글 3.다음 번호 선택")
+        var url; //defind
+        switch(site){
+            case "1":
+                url ="http://www.naver.com";
+                break
+            case "2": case "4":
+                url ="http://www.google.com";
+                break
+            case "3":
+                url ="http://www.daum.net";
+                break
+            default:
+                alert("번호를 잘못 입력하셨습니다.");
+        }
+
+        if(url){ //url이 존재할 때에만
+            location.href = url;
+
+        }
+
+    
+    </script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+
+</body>
+</html>

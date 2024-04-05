@@ -1,0 +1,45 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <title>switch</title>
+    <script>
+        // switch 두수와, ( + - * / ) 부호를 입력받아 두수의 결과값을 출력하시오
+        // 1. 두수 입력
+        // 2. 사칙연산 부호를 입력
+        // 3. switch를 사용해서 결과값을 출력하시오.
+
+        var num1 = Number(prompt("첫번째 숫자를 입력하세요"))
+        var num2 = Number(prompt("두번째 숫자를 입력하세요 "))
+        var cal = prompt("(+ - * /) 중 하나를 입력하세요")
+
+        var result;
+        switch(cal){
+            case "+":
+                result = num1 + num2
+                // document.write(num1 + num2);
+
+                break
+            case "-":
+                result = num1 - num2
+                break
+            case "*":
+                result = num1 * num2
+                break
+            case "/":
+                result = num1 / num2
+                break
+        }
+        
+        document.write(result);
+    
+    </script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+
+</body>
+</html>
