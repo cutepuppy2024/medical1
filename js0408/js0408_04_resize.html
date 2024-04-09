@@ -1,0 +1,67 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <title>window,resize</title>
+    <script>
+
+    </script>
+    <style>
+        * {margin:0; padding:0;}
+        div{width:400px; height:100px; margin:50px auto;}
+
+    </style>
+    <script>
+        // window.open() 
+       
+        // alert("경고창을 띄웁니다.");    -> window.가 생략된것
+        // var input1 = prompt("데이터를 입력하는 창입니다.");  -> 취소 누르면 null
+        // document.write("입력데이터 : ", input1);
+        /* var result = confirm("삭제하시겠습니까?");
+        document.write("confirm :",result)   // -> 확인 : true, 취소 : false */
+
+
+    </script>
+
+</head>
+<body>
+    <div>
+        <button onclick="open_popup()">팝업창 열기</button>
+        <br><br>
+        <button onclick="popup_resize()">팝업창 크기조절+(resizeTo)</button>
+        <br><br>
+        <button onclick="popup_resize2()">팝업창 크기조절-(resizeTo)</button>
+
+    </div>
+
+    <script>
+        var w; // 함수 외수 -> 전역변수
+        var x_size = 302; 
+        var y_size = 402;
+
+        function open_popup(){   // 함수 내부 -> 지역변수
+            w = window.open('popup.html','popup','width=302,height=402'); // -> 위치값이 없어지면  0,0자리에 팝업이 뜬다 
+                                                                    // -> 현재 자신의 팝업으로 해야 조절가능, 파일이 들어오면 누를때마다 팝업생성, 이름 정해주면 더이상 안뜸
+            // w.document.write("<h1>팝업창</h1>");
+            w.focus();
+        }
+    
+        function popup_resize(){   // 누를 때마다 크기변화
+            x_size +=100;
+            y_size +=100;
+            w.resizeTo(x_size,y_size);    // 사이즈 키우기
+            w.focus();
+        }
+
+        function popup_resize2(){   // 누를 때마다 크기변화
+            x_size -=100;
+            y_size -=100;
+            w.resizeTo(x_size,y_size);    // 사이즈 키우기
+            w.focus();
+        }
+    </script>
+
+
+
+</body>
+</html>
+ 
