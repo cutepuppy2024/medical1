@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title></title>
+
+    <style>
+        .n1{background:yellow; color:blue; font-weight:700;}
+
+    </style>
+    <script>
+        $(function(){
+            /*
+            $("#nbtn1").click(function(){
+                console.log("name 속성값: "+$(".n1").attr("name"));
+                console.log("type 속성값: "+$(".n1").attr("type"));
+                console.log("readonly 속성값: "+$(".n1").attr("readonly"));
+            */
+            
+            // 체크박스를 클릭하면 id값을 console출력
+            $("#game").click(function(){
+                console.log("id의 속성값 : "+$("#game").attr("id"))
+                $("#game").attr("value","game2");   // 속성을 바꾸기
+            })
+            $("golf").click(function(){
+                console.log("id의 속성값 :"+$("golf").attr("id"));
+            })
+            $("book").click(function(){
+                console.log("id의 속성값 :"+$("book").attr("id"));
+            })
+
+                
+            });
+
+        
+
+
+    </script>
+</head>
+<body>
+    <input type="checkbox" name="hobby" id="game" value="game">
+    <label for="game">게임</label>
+    <input type="checkbox" name="hobby" id="golf" value="golf">
+    <label for="golf">골프</label>
+    <input type="checkbox" name="hobby" id="book" value="book" checked>
+    <label for="book">독서</label>
+    <br><br>
+
+    <input type="text" name="n1" class="n1" value="네이버" readonly>
+    <button id="nbtn1">체크</button><br>
+
+</body>
+</html>

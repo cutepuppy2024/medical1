@@ -1,0 +1,30 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function mbtn(){
+            //alert("test");
+            //console.log(document.querySelectorAll("input[type='radio']")[0]);  //[1] 여성 / 여러개를 중복으로 찾아줌
+            console.log(document.querySelector("input[type='radio']:checked").value);
+
+            let gen= document.querySelector("input[type='radio']:checked").value;
+
+        }
+
+    </script>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <input type="radio" name="gender" id="male" value="남성">
+    <label for ="male">남성</label>
+    <input type="radio" name="gender" id="female" value="여성">
+    <label for ="female">여성</label>
+
+    <button onclick="mbtn()">확인</button>
+
+</body>
+</html>

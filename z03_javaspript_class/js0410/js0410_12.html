@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title></title>
+
+    <style>
+        section{width:1200px; margin:50px auto;}
+        h2{text-align:center;}
+        table{border-collapse:collapse; width:1200px;}
+        table,th,td{border:1px solid black; text-align:center;}
+        th{height:45px; background:#efefef;}
+        td{height:40px;}
+
+    </style>
+    <script>
+        $(function(){
+
+        let no = [1,2,3,4,5,6,7,8,9,10];
+        let name = ['aaa','bbb','ccc','Cholom', 'Marja', 'Rebbecca', 'Dotti', 'Aleta', 'Langston', 'Byran'];
+        let add = [1111,2222,3333,5462,7238,5127,6703,6602,3334,5543];
+        let gender = ['남자','남자','남자','남자','여자','여자','여자','여자','여자','여자'];
+        let phone = ['640-176-1140', '112-116-7358', '827-134-1052', '902-633-5447', '259-566-8811',
+                    '550-280-4598', '974-632-1467', '498-680-5954', '532-597-6922', '458-696-4923']
+        let email = ['aepelett0@topsy.com', 'cchadwen1@arizona.edu', 'wpalser2@ca.gov', 'skimbling3@live.com', 'mboustred4@rambler.ru',
+                    'rtunnock5@java.com', 'dtuohy6@phpbb.com', 'apendreigh7@123-reg.co.uk', 'lparfrey8,@mediafire.com', 'brocks9@goo.gl']
+
+        let p_data ='';
+        for (i=0;i<10;i++){
+            p_data += "<tr id='"+no[i]+"'>"
+            p_data += "<td>"+no[i]+"</td>"
+            p_data += "<td>"+name[i]+"</td>"
+            p_data += "<td>"+add[i]+"</td>"
+            p_data += "<td>"+gender[i]+"</td>"
+            p_data += "<td>"+phone[i]+"</td>"
+            p_data += "<td>"+email[i]+"</td>"
+            p_data += "<td><button class=.del_pdata>삭제</button</td>"
+            p_data += "</tr>"
+        }
+
+        $("tbody").html(p_data);
+
+
+        $(".del_pdata").click(function(){
+            //let del_p = $(".del_pdata").parent().parent().attr("id")
+            let del_p = $("#"+this).text()
+            console.log(del_p);  //간단히 찾아가면 안되나?
+            if (confirm("정말 삭제하시겠습니까?"));
+                $("#"+del_p).remove()
+        })
+         
+    }); //jquery 
+    </script>
+
+</head>
+<body>
+    <div>
+    <table>
+        <colgroup>
+            <col width = "5%">
+            <col width = "15%">
+            <col width = "10%">
+            <col width = "10%">
+            <col width = "25%">
+            <col width = "25%">
+            <col width = "10%">
+
+        </colgroup>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>주소</th>
+                <th>성별</th>
+                <th>전화번호</th>
+                <th>이메일</th>
+                <th>삭제</th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
+
