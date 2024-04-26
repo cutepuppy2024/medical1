@@ -17,10 +17,6 @@ print(soup.prettify())
     
 print("완료")
 
-
-
-
-
 # browser = webdriver.Chrome()
 # browser.get("http://www.naver.com/")
 

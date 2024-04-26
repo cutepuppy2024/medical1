@@ -1,6 +1,3 @@
-# 메일로 전송을 시켜주는 자동화 프로그램 구성
-# 1. 주식 2. 뉴스 3. 날씨
-
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -23,10 +20,6 @@ elem.click() # 로그인페이지로 넘어옴
 time.sleep(3) # 확인용
 browser.back() # 뒤로가기 browser.forward() 앞으로 가기 
 browser.refresh() # 새로고침 F5
-
-
-
-
 
 # 네이버 검색부분에 검색어를 입력
 #id = query
