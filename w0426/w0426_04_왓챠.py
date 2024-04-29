@@ -59,7 +59,7 @@ browser.quit()
 # elem = browser.find_element(By.CLASS_NAME,"custom-11ytuur e1134x5i3")) # section
 # elem = browser.find_element(By.XPATH,"//*[@id="root"]/div[1]/main/div/section[17]/div[2]/ul/li[1]/div/a/div/div")
 # elem = browser.find_element("//a[text()=""])
-# elem = browser.find_element("//i[content(text,"")])
+# elem = browser.find_element("//i[content(text(),"")])
 
 # 웹스크래핑 
 # find("a",{"class":"custom-4zleql e1bnpttb2"})
