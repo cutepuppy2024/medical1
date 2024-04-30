@@ -36,6 +36,11 @@ elem = browser.find_element(By.XPATH,'//i[contains(text(),"김포국제공항")]
 elem.click() 
 time.sleep(2)
 
+# 도착지 선택
+elem = browser.find_element(By.XPATH,'//b[text()="도착"]')
+time.sleep(1)
+elem.click()
+
 # 국내부분 클릭
 elem = browser.find_element(By.XPATH,'//button[text()="국내"]')
 time.sleep(2)
@@ -54,11 +59,7 @@ print("14일의 개수 :",len(elem))
 time.sleep(1)
 elem[1].click()
 
-# 오는날 부분 선택
-elem = browser.find_element(By.XPATH,'//button[text()="오는 날"]').click()
-time.sleep(1)
-
-# 가는날짜 선택
+# 오는날짜 선택
 elem = browser.find_elements(By.XPATH,'//b[text()="15"]')
 print("15일의 개수 :",len(elem))
 time.sleep(1)
@@ -80,7 +81,7 @@ browser.find_element(By.XPATH,'//span[contains(text(),"항공권 검색")]').cli
 
 # 대기시간
 # time.sleep(7)
-elem = WebDriverWait(browser,30).until(EC.presence_of_all_elements_located)((By.XPATH,'//div[@class="domestic_Flight__sK0eA"]'))
+elem = WebDriverWait(browser,30).until(EC.presence_of_all_elements_located((By.XPATH,'//div[@class="domestic_Flight__sK0eA"]')))
 print(elem)
 print(elem[0].text)
 
@@ -100,7 +101,7 @@ while True:
     print("현재 높이 :",curr_height)
         
 
-# 웹스크래팽을 하면 됨
+# 웹스크래핑을 하면 됨
 
 soup = BeautifulSoup(browser.page_source,'lxml')
 with open("flight.html","w",encoding="utf8") as f:
@@ -120,7 +121,7 @@ browser.quit()
 # 문자열과 일치할 때 선택방법
 # elem = browser.find_element('//i[text()="김포국제공항")]')
 # 문자열이 포함되어 있을 때 선택방법
-# elem = browser.find_element('//i[content(text(),"김포국제공항")]')
+# elem = browser.find_element('//i[contains(text(),"김포국제공항")]')
 # id를 가지고 선택방법
 # elem = browser.find_element('//i[@id ="_next"]')
 # class를 가지고 선택방법
