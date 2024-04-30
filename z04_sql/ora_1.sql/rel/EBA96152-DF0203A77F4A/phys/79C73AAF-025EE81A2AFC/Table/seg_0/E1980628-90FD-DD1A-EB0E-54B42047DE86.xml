@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="EMPLOYEES" directorySegmentName="seg_0" id="E1980628-90FD-DD1A-EB0E-54B42047DE86">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:37 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<schemaObject>A7FA16C5-B813-FA34-7FC3-E4F68B363506</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3CD6A508-F87A-3F74-7718-1B0C4E8D7375</segment>
+<tableSpace>39468EE7-C8CB-1EC3-F64C-4B94713CD0A6</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CREATE_DATE" id="24EE06BD-FF9C-EAAA-6A03-ABE6007944B8">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<defaultValue>SYSDATE</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="DEPARTMENT_ID" id="281E435C-604B-DB53-8393-37024E9CB9C2">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMAIL" id="34FF3D2B-7C93-31A4-1F86-1D89583C4A4A">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="JOB_ID" id="41EBE9AA-989C-46A9-D2D5-106863C113C5">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RETIRE_DATE" id="60672058-A615-6046-EE6A-F04D3D74A7BB">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMMISSION_PCT" id="7316AECC-056F-05A0-9288-8712D2AA0077">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALARY" id="7809F164-2EE5-4D3F-50BF-7F7A7710CAFB">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE_NUMBER" id="89CF5041-C150-5B3F-1BCF-FA40291EE0B1">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UPDATE_DATE" id="92BE0654-3749-6C5E-88AF-E3C435C60EFF">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<defaultValue>SYSDATE</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="EMP_NAME" id="CBC4B7D6-0CB3-1535-A979-12DF097FF99C">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MANAGER_ID" id="D4821263-FD84-A465-C2A7-EFB147710B66">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HIRE_DATE" id="DCF48A7C-2518-902D-B47C-38335935F586">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMPLOYEE_ID" id="F7032093-9F16-8D5A-B41F-334D773FAB6F">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_EMPLOYEES" id="8D2AEF2A-E377-BE38-2DEF-44CFA2CF9FEB">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<schemaObject>A7FA16C5-B813-FA34-7FC3-E4F68B363506</schemaObject>
+<segment>433118C1-1B07-B770-C508-F6C6C7537287</segment>
+<tableSpace>39468EE7-C8CB-1EC3-F64C-4B94713CD0A6</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_EMPLOYEES" id="A15CFAFF-EA22-2561-5918-B5482B7B77B8">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<segment>433118C1-1B07-B770-C508-F6C6C7537287</segment>
+<tableSpace>39468EE7-C8CB-1EC3-F64C-4B94713CD0A6</tableSpace>
+<existingIndex>8D2AEF2A-E377-BE38-2DEF-44CFA2CF9FEB</existingIndex>
+<indexSegment>433118C1-1B07-B770-C508-F6C6C7537287</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

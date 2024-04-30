@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="MEMBER" directorySegmentName="seg_0" id="EF47FA91-F105-18B1-3439-1A8184D29031">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:37 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<schemaObject>A7FA16C5-B813-FA34-7FC3-E4F68B363506</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3CD6A508-F87A-3F74-7718-1B0C4E8D7375</segment>
+<tableSpace>39468EE7-C8CB-1EC3-F64C-4B94713CD0A6</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PW" id="17E28693-1F1F-BC3D-3E77-2EA3278EE743">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="67CC8B70-1506-32AF-6662-C73B2F4E0E73">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="GENDER" id="9C5359B9-4AB6-A6DF-F8C6-AD5543C70059">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MDATE" id="C978B492-BE2A-A04B-5215-F50BE1907130">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<defaultValue>sysdate</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="MEMNO" id="D436A1CF-FC79-F3F2-D8BE-35336CFBCD11">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="F129CBD0-9820-A36D-57DC-BB427CFDF2D3">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="MEMBER_PK" id="3A27861D-EBEB-0793-573E-7F4642573EB9">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<schemaObject>A7FA16C5-B813-FA34-7FC3-E4F68B363506</schemaObject>
+<segment>433118C1-1B07-B770-C508-F6C6C7537287</segment>
+<tableSpace>39468EE7-C8CB-1EC3-F64C-4B94713CD0A6</tableSpace>
+<indexSegment>433118C1-1B07-B770-C508-F6C6C7537287</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

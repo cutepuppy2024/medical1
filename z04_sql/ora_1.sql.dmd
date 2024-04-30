@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ora_1.sql" id="26FA2C67-0626-D067-E9F9-05E150D49F02" version="3.5">
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:53:29 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>26FA2C67-0626-D067-E9F9-05E150D49F02</designId>
+</OSDM_Design>

@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ADBDAE8C-9D00-58D5-36FC-17F18C668D2F" schemaObject="A7FA16C5-B813-FA34-7FC3-E4F68B363506" name="JOBS">
+<sourceConnName>ora_user 접속자</sourceConnName>
+<sourceObjSchema>ORA_USER</sourceObjSchema>
+<sourceObjName>JOBS</sourceObjName>
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:37 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="JOB_ID" id="EEC58F2E-A9AE-4A58-49F8-9979A3371B4C">
+<sourceConnName>ora_user 접속자</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[JOB ID]]></commentInRDBMS>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JOB_TITLE" id="ADBDA2B7-5302-7844-A98F-37A9F6156515">
+<sourceConnName>ora_user 접속자</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>JOB_TITLE</sourceObjName>
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[JOB 명;]]></commentInRDBMS>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80 BYTE</dataTypeSize>
+<ownDataTypeParameters>80 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MIN_SALARY" id="C7BF1676-540D-26D7-B084-DC6F7D0C768C">
+<sourceConnName>ora_user 접속자</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>MIN_SALARY</sourceObjName>
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[최소급여]]></commentInRDBMS>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAX_SALARY" id="F31662EE-8D1E-B2D6-4AF0-BCD21BA0505A">
+<sourceConnName>ora_user 접속자</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>MAX_SALARY</sourceObjName>
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[최대급여]]></commentInRDBMS>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATE_DATE" id="6EC04A65-C3FA-BED1-92AE-D846F8842622">
+<sourceConnName>ora_user 접속자</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>CREATE_DATE</sourceObjName>
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[생성일자]]></commentInRDBMS>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UPDATE_DATE" id="DF1D7643-6D1E-16EF-DF63-4C4E66D9F9B7">
+<sourceConnName>ora_user 접속자</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>UPDATE_DATE</sourceObjName>
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[변경일자]]></commentInRDBMS>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="055F4B66-19A2-2B6A-D7D3-3E4421378234" name="PK_JOBS">
+<sourceConnName>ora_user 접속자</sourceConnName>
+<sourceObjSchema>ORA_USER</sourceObjSchema>
+<sourceObjName>PK_JOBS</sourceObjName>
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEC58F2E-A9AE-4A58-49F8-9979A3371B4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F7193124-5166-9949-63CD-637A4D5FF953" schemaObject="A7FA16C5-B813-FA34-7FC3-E4F68B363506" name="PK_JOBS">
+<sourceConnName>ora_user 접속자</sourceConnName>
+<sourceObjSchema>ORA_USER</sourceObjSchema>
+<sourceObjName>PK_JOBS</sourceObjName>
+<createdBy>KOREAVC</createdBy>
+<createdTime>2024-04-30 05:54:38 UTC</createdTime>
+<ownerDesignName>ora_1.sql</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEC58F2E-A9AE-4A58-49F8-9979A3371B4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
