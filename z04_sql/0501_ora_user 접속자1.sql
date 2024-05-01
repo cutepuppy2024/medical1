@@ -205,6 +205,9 @@ rollback;
 
 update member set name='홍길동' where id='aaa';
 
+
+-- <  0501_03  > 
+
 select emp_name from employees;
 
 select a.* from employees a, employees b
@@ -226,3 +229,31 @@ order by id;
 
 commit;
 
+-- < 0501_05  >
+create table mem (
+id varchar2(30),
+pw varchar2(30),
+name varchar2(30),
+mdate date
+);
+
+drop table mem;
+
+select * from mem;
+
+create table yeogi (
+yno number(4) primary key,
+title varchar2(100) not null,
+region varchar2(30),
+score number,
+member number,
+img varchar2(100),
+price number
+
+);
+
+select * from yeogi;
+
+alter table yeogi modify (img varchar2(150));
+
+desc yeogi;
