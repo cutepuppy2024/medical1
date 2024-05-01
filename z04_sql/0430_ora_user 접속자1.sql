@@ -368,7 +368,7 @@ from ( select rownum rnum, b.* from (select a.* from stu_score a order by kor de
 where rnum >=21 and rnum <=30;
 
 
-
+drop table students;
 
 
 
