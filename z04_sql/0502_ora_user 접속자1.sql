@@ -19,3 +19,15 @@ select * from ( select row_number() over(order by no) rnum,a.* from stu_score a
 where id like '%a%' ) where rnum>=11 and rnum<=20
 ;
 select count(*) from stu_score where id like '%a%';
+
+create table melon (
+mno number primary key,
+rank number,
+v_rank number,
+img varchar2(150),
+title varchar2(100),
+singer varchar2(100),
+likeNum number
+);
+
+select * from melon;

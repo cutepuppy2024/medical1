@@ -70,11 +70,6 @@ elem = browser.find_elements(By.XPATH,'//*[@id="__next"]/div/main/div[4]/div/div
 elem.click()
 time.sleep(3)
 
-# 가는날짜 선택
-elem = browser.find_elements(By.LINK_TEXT,'')
-elem.click()
-time.sleep(3)
-
 
 
 

@@ -25,7 +25,7 @@ time.sleep(2)
 # 1. 야놀자 홈페이지 이동
 # elem = browser.find(By.CLASS_NAME,'gLFyf')
 # elem.send_keys("야놀자")
-# elem.click()
+# elem.send_keys(Keys.ENTER)
 # time.sleep(2)
 
 # 2. 호텔입력
