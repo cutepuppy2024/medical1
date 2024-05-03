@@ -197,12 +197,14 @@ select * from daum_movie;
 create table coupang (
 cno number primary key,
 title varchar2(100),
-img varchar2(100),
+img varchar2(300),
 price number(10),
 grade number(10),
 eval_num number(10)
 );
 
+alter table coupang modify (img varchar2(300)); 
+drop table coupang; 
 
 create table flight (
 fno number(4) primary key,
