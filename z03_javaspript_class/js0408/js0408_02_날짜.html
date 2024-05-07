@@ -37,10 +37,10 @@
         document.write(nowYear,"년",nowMonth+1,"월",nowDate,"일",f_day,"<br>");
 
         var d_day = new Date(2024,11,31); // 특정날짜
-        var nowYear2 = today.getFullYear();
-        var nowMonth2 = today.getMonth();
-        var nowDate2 = today.getDate();
-        var nowDay2 = today.getDay()
+        var nowYear2 = d_day.getFullYear();
+        var nowMonth2 = d_day.getMonth();
+        var nowDate2 = d_day.getDate();
+        var nowDay2 = d_day.getDay()
         var f_day2;
         switch(nowDay2){
             case 0: f_day2="일요일"; break;

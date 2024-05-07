@@ -27,7 +27,7 @@
 
             let hdata = '';
             for (let i=0; i<10; i++){
-                hdata += "<tr id='"+no[i]+"''>"
+                hdata += "<tr id='"+no[i]+"'>"
                 hdata += "<td>"+no[i]+"</td>"
                 hdata += "<td>"+name[i]+"</td>"
                 hdata += "<td>"+kor[i]+"</td>"
@@ -35,26 +35,21 @@
                 hdata += "<td>"+math[i]+"</td>"
                 hdata += "<td>"+total[i]+"</td>"
                 hdata += "<td>"+total[i]+"</td>"
-                hdata += "<td><button class=.delBtn>삭제</button></td>"
-                hdata += "</tr>"
+                hdata += "<td><button class='delBtn'>삭제</button></td>"
+                hdata += "</tr>";
+            }
+                
+            $("tbody").html(hdata);
+                
+                
+            $(".delBtn").click(function(){
+                let del_id = $(this).parent().parent().attr("id");
+                console.log($(this).parent().parent().attr("id"));
+                if(confirm(del_id+"번을 삭제하시겠습니까?")){
+                    $("#"+del_id).remove();
+                }
+            })
 
-                $("tbody").html(hdata)
-
-                $(".delBtn").click(function(){
-
-                    console.log("class 요소 모음 :",$(".delBtn")[0].innerText);
-                });
-
-                /*
-                $(".delBtn").click(function(){
-                    let del_id = $(".delBtn").parent().parent();
-                    console.log($(".delBtn").parent().parent.attr("id"));
-                    if(confirm("삭제하시겠습니까?"))
-                        $(del_id.attr("id")).remove();
-                })*/
-        
-            }   
-        
         });// jquery
 
     </script>

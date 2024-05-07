@@ -30,13 +30,13 @@
 
             //표준체중 계산방법  - 남성: 키(m) × 키(m) × 22 , 여성: 키(m) × 키(m) × 21
             let result_kg = 0;
-            //console.log(document.querySelectorAll("input[type='radio']")); //여러 개를 찾아줌.
+            //console.log(document.querySelectorAll("input[type='radio']"));         // 여러 개를 찾아줌.
             let gen = document.querySelector("input[type='radio']:checked").value;
 
             if(gen=="남성") result_kg = height*height*22;
             else result_kg = height*height*21; 
 
-            let result = "당신의 신체질량지수(BMI)는 "+bmi+" (으)로 "+ result_title  +"입니다.<br> 평균체중 "+result_kg+" kg 입니다. ";
+            let result = "당신의 신체질량지수(BMI)는 "+bmi+" (으)로 "+ result_title  +"입니다.<br> 표준체중 "+result_kg+" kg 입니다. ";
             document.querySelector("#main").innerHTML = result;
         }
         

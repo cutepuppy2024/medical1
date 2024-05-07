@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>setInterval</title>
+    <style>
+        *{margin:0; padding:0;}
+        div{width: 400px; height:200px; margin:50px auto;}
+        button{width:150px; height:40px; display:block; margin:0 auto;}
+        h2{font-size:40px; text-align:center; border:3px solid black;}
+    </style>
+    <script>
+        // var addNum = 0;
+        function auto_plus(){
+            auto1 = setInterval(add_num,1000);  //setInterval(add_num(),1000);  -> 누를 때마다 실행
+        }
+
+        add_num = function (){   // 무명함수로 해 주는 것이 좋다
+            // 숫자
+            // addNum++;
+            // 시간 -> 객체선언 먼저
+
+            var today = new Date();
+            var nowHour = today.getHours();
+            console.log(nowHour)
+            nowHour = String(nowHour).padStart(2,"0");
+            var nowMinute = today.getMinutes();
+            console.log(nowMinute)
+            nowMinute  = String(nowMinute).padStart(2,"0");
+            var nowSecond = today.getSeconds();
+            console.log(nowSecond)
+            nowSecond  = String(nowSecond).padStart(2,"0");
+            var auto_time = nowHour+":"+nowMinute+":"+nowSecond
+
+            document.querySelector(".title").innerText = auto_time;
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <h2 class="title">00:00:00</h2>
+        <br>
+        <button onclick="auto_plus()">시계START</button>
+        <button onclick="clearInteraval(auto1)">시간멈춤</button>
+    </div>
+</body>
+</html>
+
+

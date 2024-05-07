@@ -19,8 +19,25 @@
             data:{},
             dataType:"json",
             success:function(data){
-                alert("데이터 가져오기 성공");
-                console.log(data)
+              alert("데이터 가져오기 성공");
+              console.log(data);
+
+              let htmlData = "";
+              for(let i=0;i<data.length;i++){
+                htmlData += "<tr>";
+                htmlData += "<td>"+data[i].no+"</td>";
+                htmlData += "<td>"+data[i].name+"</td>";
+                htmlData += "<td>"+data[i].kor+"</td>";
+                htmlData += "<td>"+data[i].eng+"</td>";
+                htmlData += "<td>"+data[i].math+"</td>";
+                htmlData += "<td>"+data[i].total+"</td>";
+                htmlData += "<td>"+data[i].avg+"</td>";
+                htmlData += "<td>"+data[i].rank+"</td>";
+                htmlData += "</tr>";
+
+            }
+            $("tbody").html(htmlData); //100개 회원정보 추가
+
             },
             error:function(){
                 alert("실패")
