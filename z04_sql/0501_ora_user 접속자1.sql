@@ -155,15 +155,11 @@ order by a.department_id;
 -- 전체에 해당되는 컬럼과 조건에 부합되는 컬럼 2가지
 -- cross join 107 * 107 -> 무의미
 -- equi join : 같은 컬럼을 가지고 검색
-select a.employee_id, a.emp_name, a.department_id, department_name a.manager_id, b.emp_name 
+select a.employee_id, a.emp_name, a.department_id, department_name, a.manager_id, b.emp_name 
 from employees a, employees b, departments c
 where a.manager_id = b.employee_id and a.department_id = c.department_id
-order by a.employee_id; -- from 키워드가 필요한 위치에 없다고? 이게 말이 되나?
-
-select a.employee_id,a.emp_name,a.department_id,department_name,a.manager_id,b.emp_name
-from employees a,employees b,departments c
-where a.manager_id = b.employee_id and a.department_id = c.department_id
 order by a.employee_id;
+
 
 -- 철자 하나 안틀린 코드인데 내가 쓴것이 오류가 나는 이유는
 

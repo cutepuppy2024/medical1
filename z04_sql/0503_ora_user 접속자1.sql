@@ -136,18 +136,9 @@ select department_id, round(avg(salary),2) from employees
 group by department_id;
 
 select emp_name, job_id, salary, department_id,
-(select round(avg(salary),2) from employees a where department_id = e.deparmtent_id
+(select round(avg(salary),2) from employees a where department_id = e.department_id
 )
 from employees e;
-
-select emp_name,job_id,salary,department_id ,
-(
-select round(avg(salary),2) from employees a
-where department_id = e.department_id
-)
-from employees e;
-
--- 이것도 동일한 코드가 카피한것 외에는 실행되지 않음
 
 
 select emp_name, job_id, salary, department_id,
@@ -175,7 +166,7 @@ where a.department_id = b.department_id;
 
 
 -- equi join
-select salary, a.department_id,department_name
+select salary, a.department_id, department_name
 from employees a, departments b
 where a.department_id = b.department_id;
 
