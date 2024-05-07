@@ -16,7 +16,7 @@ while True:
     print('입력하신 번호는 {}입니다'.format(choice))
     choice = int(choice)
     if choice == 1:
-        print('학생성적입력입니다')
+        print('[ 학생성적입력을 선택하셨습니다 ]')
         name = input('학생이름을 입력하세요 >>')
         kor = int(input('국어성적을 입력하세요 >>'))
         eng = int(input('영어성적을 입력하세요 >>'))
@@ -28,7 +28,7 @@ while True:
         students.append(stu1)
         print(students)
     elif choice == 4 :
-        print('학생출력을 선택하셨습니다')
+        print(' [ 학생출력을 선택하셨습니다 ] ')
         print('번호\t이름\t국어\t영어\t수학\t총점\t평균')
         for i, p_stu in enumerate(students):
             print('{}'.format(students[i][1]))
@@ -36,7 +36,7 @@ while True:
             # print('{}\t{}\t{}\t{}\t{}\t{}\t{}'.format(students[i][0],))
             # print('{}\t{}\t{}\t{}\t{}\t{}\t{}'.format(p_stu[0],))
     elif choice == 5:
-        print('학생검색을 출력하셨습니다')
+        print(' [ 학생검색을 출력하셨습니다 ] ')
         for p, s_stu in enumerate(students):
             search_Name = input('검색할 학생의 이름을 입력하세요 >>')
             if search_Name in p:
@@ -45,7 +45,7 @@ while True:
             else:
                 print('존재하지않습니다')
     elif choice == 3:
-        print('학생검색삭제를 출력하셨습니다')
+        print(' [ 학생검색삭제를 출력하셨습니다 ] ')
         for d, s_del in enumerate(students):
             del_Name = input('검색하여 삭제하실 학생의 이름을 입력하세요 >>')
             if del_Name in d:
@@ -54,6 +54,17 @@ while True:
                 print(students)
             else:
                 print('검색하신 학생의 이름이 존재하지 않습니다')
+                
+    elif choice == 2:
+        print(' [ 학생성적 수정을 선택하셨습니다. ] ')
+        for p, s_stu in enumerate(students):
+            search_Name = input('검색할 학생의 이름을 입력하세요 >>')
+            if search_Name in p:
+                print(search_Name,'이 존재합니다')
+                print(p)
+            else:
+                print('존재하지않습니다')
+        
             
         
         

@@ -1,6 +1,7 @@
 
 num = [[10,20],[30,40],[50,60]]
 
+
 for i in range(len(num)):  # i  = i,1,...
     for j in range(len(num[i])) : # j = 0,1,...
         print(num[i][j])  # num[0][0]  num[0][1]
