@@ -34,7 +34,7 @@ eng= int(input('영어점수를 입력하세요 >>'))
 math = int(input('수학점수를 입력하세요 >>'))
 # 리스트에 값 넣기
 # 방법1
-stuP =[name, kor,eng,math]
+stuP =[name,kor,eng,math]
 print(stuP)
 stuP.append(kor+eng+math)  #총점
 stuP.append((kor+eng+math)/3)  #평균

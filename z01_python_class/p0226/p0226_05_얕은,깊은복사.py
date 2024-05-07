@@ -5,13 +5,13 @@ b = 2
 c = a #c에 a 값을 넣음
 print(a,b,c)
 a = 8
-print('변수:' a,b,c)
+print('변수:', a,b,c)
 print(id(a))
 print(id(b))
 print(id(c))
 
 a = 8
-print('변수:' a,b,c)
+print('변수:', a,b,c)
 print(id(a))
 print(id(b))
 print(id(c))
