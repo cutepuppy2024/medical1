@@ -6,6 +6,12 @@ mynum = []
 
 
 # 2. 입력받은 숫자 6개 :
+for i in range(6):
+    n2 = int(input("{}번째 숫자를 (1-10 중) 숫자를 입력해 주세요 >>".format(i+1)))
+    mynum.append(n2)
+
+print('입력하신 숫자는 {}입니다.'.format(mynum))
+
 
 # 3. 로또번호 생성하기
 l = [1,2,3,4,5,6,7,8,9,10]

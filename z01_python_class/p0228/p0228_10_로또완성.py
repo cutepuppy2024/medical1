@@ -16,7 +16,7 @@ print('선택하신 6개의 숫자는 {}입니다.'.format(mynum))
 # for q in range(6):
 #     q = randint(1,45)
 #     lotto.append(q)
-print(lotto)
+# print(lotto)
 
 # 3. 로또 번호 생성하기 :
 # 1-45 까지의 숫자
@@ -35,7 +35,7 @@ for i in range(100):
 print(l)
 # print(l[0:6])
 
-for i in range(6):
+for i in l[0:6]:
     lotto.append(i)
 print(lotto)
 
@@ -47,7 +47,7 @@ print(ok)
 
 print('입력한 숫자 : {}'.format(mynum))
 print('로또 숫자 : {}'.format(lotto))
-print('당첨된 숫자 : {}'.format(ok))
+print('당첨된 숫자 : {}, 당첨된 개수 : {}'.format(ok,len(ok)))
 
 
     

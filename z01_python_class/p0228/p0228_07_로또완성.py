@@ -16,7 +16,7 @@ print(lotto)
 print('lotto 숫자는{} 입니다.'.format(lotto))
 
 for i in range(6):
-    n2 = int(input("{}번째 숫자를 (1-10 중) 숫자를 입력해 주세요 >>".format(i+2)))
+    n2 = int(input("{}번째 숫자를 (1-10 중) 숫자를 입력해 주세요 >>".format(i+1)))
     mynum.append(n2)
 
 print('입력하신 숫자는 {}입니다.'.format(mynum))
@@ -29,4 +29,11 @@ for i in range(6):
         lotto.append(p)
 
 # 입력숫자와 랜덤숫자 비교
+cnt = 0
+for i in range(6):
+    if lotto == mynum:
+        cnt += 1
+        
+print("맞춘 숫자의 개수 : ", cnt,"개")
+        
 

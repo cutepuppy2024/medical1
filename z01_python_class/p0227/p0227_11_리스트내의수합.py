@@ -60,4 +60,3 @@ for i in range(num[0],num[-1]+1):
     sumA += i
 print(sumA)
 
-# num2리스트 내 숫자들의 합을 구하세요

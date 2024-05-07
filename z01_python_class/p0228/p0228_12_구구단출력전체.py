@@ -57,14 +57,15 @@ for i in range(2,10):
         print()
         
 # 홀수단만 출력해보세요
+
 for i in range(2,10):
     if i%2 == 1 :
         print('[{}]단'.format(i))
         for j in range(1,10):
             print('{}*{}={}'.format(i,j,i*j),end=' ')
+        print()
 
-#(* 1,3,5,7,9)  출력
-# ex) 3*1 =3, 3*3 = 9, 3 * 5 = 15...
+# 구구단 전체 출력 다시
 for i in range(2,10) :
     print('[{}단]'.format(i))
     for j in range(1,10):
