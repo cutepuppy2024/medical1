@@ -17,7 +17,7 @@ for a in score:
     print('리스트입니다', a)
     for b in a :
         print('요소입니다',b)
-        t1 =t1 +b
+        t1 = t1 +b
     print(t1)
     
 for i in range(len(score)): # i = 0,1,2,3

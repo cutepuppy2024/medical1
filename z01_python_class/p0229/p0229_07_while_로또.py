@@ -10,20 +10,6 @@ from random import *
 # # print(randint(1,100))
 
 
-# while True :   => 
-#     n1 = randint(1,100)  
-#     n2 = int(input('숫자를 입력해 주세요 >> '))
-#     if n2 < n1 :                                # continue를 쓰게 되면 그 수를 제외하라는 의미이므로 쓸 필요가 없다
-#         print('다시 입력해 주세요')
-#     elif n2 > n1 :
-#         print('다시 입력해주세요')
-#         continue
-#     elif n1 == n2 :
-#         print('당첨')
-#         break
-
-
-
 # # 입력한 숫자가 랜덤숫자보다 작으면 작습니다 더 큰수를 입력해주세요
 
 # n1 = randint(1,100)   # 정답에 가까운 수를 찾고자 할 때 무한루프 안으로 들어가지 않게 하기 위해서 밖으로 빼면 된다
@@ -50,7 +36,9 @@ from random import *
 #         continue
     
     
-# while    # while 안에 if구문으로 다시 한번 확인하기!!
+    
+# 1. 숫자 입력하여 당첨숫자 찾기   
+# while                                 
 # n1 = int(randint(1,100))
 # while True:
 #     n2 = int(input('숫자를 입력해 주세요 >>'))
@@ -81,7 +69,9 @@ for i in range(10):
         print('입력하신 숫자가 랜덤숫자보다 작습니다. 더 큰수를 입력해주세요')
 print('사용자가 입력한 숫자들은 :', inputList)   
 
-# 3. 10회 도전이 실패한 사람에게 랜덤숫자 알려주기    # !!!!!
+
+
+# 3. 10회 도전이 실패한 사람에게 랜덤숫자 알려주기   
 from random import *
 
 cnt = 0 
