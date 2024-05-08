@@ -11,6 +11,8 @@ df.nlargest(3)  # 가장 큰 값
 df.nsmallest(4) # 가장 작은 값
 
 
+## <  컬럼  >
+
 df['키'].max()
 df['키'].min()
 df['키'].mean()
@@ -43,3 +45,12 @@ df.columns
 
 # 복수개를 for문을 돌리지 않고도 비교가능
 df['키'] > df['키'].mean()
+
+
+
+##  <  Rows  >
+# loc[인덱스명] , iloc[인덱스번호]
+
+df
+df.loc['1번']
+df.iloc[0]
