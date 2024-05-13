@@ -170,7 +170,7 @@ df.sort_index()
 df.sort_index(ascending=False)
 # 2) 선택한 컬럼으로 정렬
 
-df['키'].sort_values()
+df['키'].sort_values()  # 분류기준을 함수 안에()
 df.sort_values('키',ascending=False)
 # 3) 같은 값이 있는 경우만 2번째 선택한 컬럼으로 정렬
 df.sort_values(['키','이름'],ascending=False)
