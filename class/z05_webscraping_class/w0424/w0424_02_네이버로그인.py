@@ -26,7 +26,7 @@ time.sleep(random.randint(2,5))
 # 자동화 방지를 위한 자바스크립트 활용 데이터 입력
 input_js = 'document.getElementById("id").value ="{id}"; \
             document.getElementById("pw").value ="{pw}"; \
-            '.format(id="sinbaram3",pw="1q2w3e4r!")
+            '.format(id="sinbaram3",pw="********")
 time.sleep(random.randint(2,5))
 # 자바스크립트 명령어 실행
 browser.execute_script(input_js)
