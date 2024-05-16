@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
 import pandas as pd
+import seaborn as sns
 
 matplotlib.rcParams['axes.unicode_minus'] = False 
 matplotlib.rcParams['font.family'] = 'Malgun Gothic'  # : windows 사용자용
@@ -13,8 +14,6 @@ plt.plot(x,y,label='국어',linestyle=':',marker='o')
 plt.legend(loc='upper center')  / plt.legend(loc=(0.2,0.5))
 plt.show()
 
-# 값을 그래프에 넣기
-plt.text(x[i],y[i]+0.5, txt, ha='center', color='blue')
 
 # 크기, 용량
 plt.figure(dpi=200)
@@ -28,11 +27,24 @@ plt.yticks([165,170,180,190,200,210])
 plt.xticks(rotation=90)
 plt.ylim(165,210)
 
+# 위치 바꾸기 : 컬럼과 인덱스
+df = df.T
+
+
+# 그래프 그리기, 선두께 : linewidth=5 label : 범례
+
+# 마커
+marker='o'/'x'
+markersize = ms : 마커 크기
+markeredgecolor = mec : 마커테두리색상
+markerfacecolor = mfc : 마커색상
+alpha : 투명도
+
 # 컬러지정
 colors = ['r','g','b','y','pink'] => 꺾은선 그래프의 경우 자동지정
 plt.bar(x,y1, label='국어', color=colors)
 
-# 눈금표시
+# 그래프에 눈금표시
 plt.grid(ls='--',alpha=0.5)
 # plt.grid(axis='y',ls='--',alpha=0.5) y축만
 
@@ -53,6 +65,9 @@ plt.bar(x,y1,label='국어')
 plt.bar(x,y2,bottom=y1, label='영어')
 plt.bar(x,y3, bottom=y1+y2,label='수학')
 
+
+# 값을 그래프에 넣기
+plt.text(x[i],y[i]+0.5, txt, ha='center', color='blue')
 for i,txt in enumerate(y1):
     plt.text(x[i],y[i]-12, txt, ha='center')
 for i,txt in enumerate(y2):
@@ -93,3 +108,21 @@ axs[0,0].set(xlabel='이름', ylabel='국어점수')
 axs[0,0].set_facecolor('#efefef') # 배경색
 # 격자표시 : grid
 axs[0,0].grid(ls='--',alpha=0.5)
+
+
+
+# 2개의 다른 그래프 합치기
+fig,ax1 = plt.subplots(2,2,figsize=(10,7))  
+# 상단타이틀 출력
+fig.suptitle('출생아수 및 합계출산율')
+ax2 = ax1.twinx() # x축을 함계 사용 :  twinsx
+ax1,ax2 따로 정의하면 
+
+
+# 상관도
+df.corr()
+# annot : 수치
+sns.heatmap(data_corr,annot=True) 
+# 히스토그램 : 각 컬럼의 데이터 구성을 확인
+df.hist(figsize=(14,14))
+df['Age'].hist()
