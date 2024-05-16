@@ -299,6 +299,7 @@ def lower_change(lang):
 
 
 ## <  그룹화  >
+
 # 그룹화하여 특정 그룹의 데이터만 출력
 df.groupby('학교').get_group('단지고')
 # 그룹화하여 개수를 출력

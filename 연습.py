@@ -1,75 +1,95 @@
+import matplotlib.pyplot as plt
+import matplotlib
+import numpy as np
 import pandas as pd
-df = pd.read_excel('score.xlsx',index_col='지원번호')
-df
 
-# df = pd.read_excel('20122022_출생.xlsx',skiprows=2,nrows=3, usecols='B:M',index_col=0)
-# df.index.name = '제목'
-# df.index
+matplotlib.rcParams['axes.unicode_minus'] = False 
+matplotlib.rcParams['font.family'] = 'Malgun Gothic'  # : windows 사용자용
+matplotlib.rcParams['font.size'] = '10' 
 
-# 문자열 함수
-# slice : 문자열 자르기
-# df_str['idx'].str.slice(1,3)
-# # df_str['idx'].map(lambda x:x[1:3])  #map(함수) , lambda : 익명함수
+# 기본 형태
+plt.plot(x,y)
+plt.plot(x,y,label='국어',linestyle=':',marker='o')
+plt.legend(loc='upper center')  / plt.legend(loc=(0.2,0.5))
+plt.show()
 
-# # split : 문자열 분리
-# a_list = ['데이터,분석가','영희,철수,바둑이','국어,영어,수학,과학,사회']
-# data = {"d_split":a_list}
-# df_str = pd.DataFrame(data)
-# s_data = df_str['d_split'].str.split(',') #배열로 분리되어 리턴
-# s_data
+# 값을 그래프에 넣기
+plt.text(x[i],y[i]+0.5, txt, ha='center', color='blue')
 
-# replace:문자열 처리, strip:공백제거
+# 크기, 용량
+plt.figure(dpi=200)
+plt.figure(figsize=(10,5))
+
+# 저장
+plt.savefig('g.png')
+plt.savefig('g2.png',dpi=300)
+
+plt.yticks([165,170,180,190,200,210])
+plt.xticks(rotation=90)
+plt.ylim(165,210)
+
+# 컬러지정
+colors = ['r','g','b','y','pink'] => 꺾은선 그래프의 경우 자동지정
+plt.bar(x,y1, label='국어', color=colors)
+
+# 눈금표시
+plt.grid(ls='--',alpha=0.5)
+# plt.grid(axis='y',ls='--',alpha=0.5) y축만
+
+# 패턴
+bar = plt.bar(x,y3, label ='국어', width=0.2, alpha =0.5)
+bar[0].set_hatch('/')
+bar[1].set_hatch('x')
+bar[2].set_hatch('..')
 
 
-# 조건 &, |
-filt  = df['키']>188  #조건식 loc
-filt
-df.loc[filt]
+# 다중막대
+plt.bar(index-0.2,y,width=0.2,label='국어')
+plt.bar(index,y2,width=0.2,label='영어')
+plt.bar(index+0.2,y3,width=0.2, label='수학')
 
-# 2개 row데이터 출력
-df.loc[['1번','5번']]
-# 1번학생의 키 값만 출력
-df.loc['1번','키']
-df.loc['1번',['이름','키']] # 1번 학생의 이름,키 출력
-df.loc[['1번','5번'],['이름','키']]
-df.loc['1번':'5번','국어':'사회']
+# 누적막대
+plt.bar(x,y1,label='국어')
+plt.bar(x,y2,bottom=y1, label='영어')
+plt.bar(x,y3, bottom=y1+y2,label='수학')
 
-# rows데이터 가져오기
-df[0:3]
-df[5:]
-# df[[0,1,3]] #error
-df.iloc[[0,1,3]]   # rows데이터 부분적으로 가져오기
-df.head()
-df.tail(2)
+for i,txt in enumerate(y1):
+    plt.text(x[i],y[i]-12, txt, ha='center')
+for i,txt in enumerate(y2):
+    plt.text(x[i],y1[i]+y2[i]-15,txt,ha='center')
+for i,txt in enumerate(y3):
+    plt.text(x[i],y1[i]+y2[i]+y3[i]-11,txt,ha='center')
 
-# 컬럼별 호출
-df['키']
-df['이름']
-df[['키','이름']][1:4]
-df[df.columns[[1,3,4]]][1:4]
-# 컬럼만 가져오기
-df.columns
-df.columns[0:3]
-df.columns[[1,4,6]]
 
-df['키'].max()
-df['키'].min()
-df['키'].mean()
-df['키'].count()
-df['국어'].sum()
-df['키'].describe()
-df['키'].info()
-df['grade'].unique() # 중복제거
+# 배열을 랜덤으로
+np.random.rand(8)*1000
 
-df['SW특기'].count() # Nan데이터는 개수에 들어가지 않음.
-df['키'].nlargest(4) # 키 큰순으로 3개 가져옴.
-df['키'].nsmallest(3) # 키 작은순으로 3개 가져옴
+# 산점도
+plt.scatter(x,y)
+# s : 크기 조절
+plt.scatter(df['영어'],df['수학'],s = 1000) 
+# 학년별 크기조절 1*500 = 500 , 2*500 = 1000, 3*500 = 1500
+sizes = df['학년']*500
+plt.scatter(df['영어'],df['수학'],s = sizes) 
+# c : 컬러 적용 -> 기준컬럼 명시
+plt.scatter(df['영어'],df['수학'],s = sizes, c = df['학년'],cmap='viridis') 
 
-df.describe() # 컬럼별 대략적인 정보, 최소값,최대값,평균 등 확인
-df.head()     # 상단 5개 출력
-df.tail()     # 하단 5개 출력
-df.info()     # 컬럼별 타입,크기 정보
-df.values     # rows데이터 배열로 출력
-df.index      # index정보
-df.columns    # 컬럼 정보
-df.shape      # 데이터 크기 
+# 컬러바 눈금표시  -  ticks : 범위지정 /  라벨표시 : label   /  컬러바크기조절 : shrink   /  하단배치 : orientation='horizontal'
+plt.colorbar(ticks=[1,2,3], label='학년', shrink=0.3, orientation='horizontal')
+
+
+# 여러개의 산점도그래프 : subplots
+fig,axs= plt.subplots(2,2, figsize=(10,10))
+# 0,0 번째 그래프 작성
+# 범례  :  label
+axs[0,0].bar(df['이름'],df['국어'], label='국어점수')
+# 범례출력 : legend
+axs[0,0].legend()
+# 상단 타이틀 : set_title
+axs[0,0].set_title('국어 그래프')
+# x,y축 글자 표시
+axs[0,0].set(xlabel='이름', ylabel='국어점수')
+# 그래프내 색상 : set_facecolor
+axs[0,0].set_facecolor('#efefef') # 배경색
+# 격자표시 : grid
+axs[0,0].grid(ls='--',alpha=0.5)
