@@ -3,6 +3,7 @@ import matplotlib
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import requests
 
 matplotlib.rcParams['axes.unicode_minus'] = False 
 matplotlib.rcParams['font.family'] = 'Malgun Gothic'  # : windows 사용자용
