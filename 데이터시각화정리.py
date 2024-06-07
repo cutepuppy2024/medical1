@@ -127,3 +127,12 @@ sns.heatmap(data_corr,annot=True)
 # 히스토그램 : 각 컬럼의 데이터 구성을 확인
 df.hist(figsize=(14,14))
 df['Age'].hist()
+
+# loop 
+plt.figure(figsize=(10,10))
+fig = plt.figure(1)
+for i in range(len(data.columns)):
+    ax = fig.add_subplot(2,3,i+1)
+    sns.distplot(df[data.columns[i]])   
+plt.tight_layout()
+plt.show()
